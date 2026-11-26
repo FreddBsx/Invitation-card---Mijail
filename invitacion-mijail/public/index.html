@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#081d48">
+  <meta name="description" content="Mijail te invita a una misión de cumpleaños llena de superhéroes.">
+  <title>¡Mijail te invita a su misión!</title>
+  <link rel="stylesheet" href="./styles.css?v=mijail-final-20261125">
+  <script src="./app.js?v=mijail-map-20261125" defer></script>
+</head>
+<body>
+  <main class="page-shell">
+    <section class="invite" aria-labelledby="invite-title">
+      <div class="poster-art-space" aria-hidden="true"></div>
+      <header class="hero">
+        <p class="eyebrow">¡ATENCIÓN, SUPERHÉROES!</p>
+        <p class="hero-script" id="hero-names">Mijail</p>
+        <h1 id="invite-title">¡Prepárate<br><span>para el cumpleaños!</span></h1>
+        <div class="comic-divider" aria-hidden="true"><span>✦</span><b>¡FIESTA EN MARCHA!</b><span>✦</span></div>
+      </header>
+
+      <section class="event-facts" aria-label="Fecha y hora">
+        <div class="fact">
+          <span class="fact-icon" aria-hidden="true">♡</span>
+          <div><p class="small-label">FECHA</p><p id="event-date" class="fact-value">Lunes, 7 de diciembre</p></div>
+        </div>
+        <div class="fact">
+          <span class="fact-icon clock-icon" aria-hidden="true">◷</span>
+          <div><p class="small-label">HORA</p><p id="event-time" class="fact-value">4:00 p. m.</p></div>
+        </div>
+      </section>
+
+      <section class="map-section" aria-labelledby="map-heading">
+        <div class="section-heading">
+          <div><p class="small-label">PUNTO DE ENCUENTRO</p><h2 id="map-heading">¿Dónde será la misión?</h2></div>
+          <span class="map-hint" id="map-hint">Toca el mapa para ampliarlo</span>
+        </div>
+        <div class="map-card" id="map-card">
+          <div class="map-preview">
+            <div id="map-canvas" class="map-canvas" hidden aria-label="Mapa con el punto fijo de la celebración"></div>
+            <iframe id="map-iframe-fallback" title="Vista previa de la ubicación" src="https://maps.google.com/maps?q=-11.8536511%2C-77.0742249&amp;z=16&amp;output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" tabindex="-1" aria-hidden="true"></iframe>
+            <div class="map-pending-preview" id="map-pending-preview" hidden><span aria-hidden="true">⌖</span><strong>Ubicación por confirmar</strong><small>Pronto enviaremos las coordenadas de la misión</small></div>
+            <button class="map-preview-toggle" id="map-preview-toggle" type="button" aria-label="Ampliar la vista del mapa" aria-expanded="false" aria-controls="map-expanded"></button>
+          </div>
+          <button class="map-toggle" id="map-toggle" type="button" aria-expanded="false" aria-controls="map-expanded">
+            <span class="map-summary"><span class="map-pin-small" aria-hidden="true">⌖</span><span><strong id="map-venue">La Guarida Araña</strong><small id="map-address">Punto de encuentro · toca para ver el mapa</small></span><span class="expand-mark" aria-hidden="true">⌄</span></span>
+          </button>
+          <div class="map-expanded" id="map-expanded" hidden>
+            <p class="map-empty" id="map-empty" hidden>La ubicación todavía está en preparación. Mijail compartirá el punto de encuentro pronto.</p>
+            <a class="maps-link" id="maps-link" href="https://maps.app.goo.gl/hem3JHniQe2Z85hE8" target="_blank" rel="noopener noreferrer">Abrir en Google Maps <span aria-hidden="true">↗</span></a>
+          </div>
+        </div>
+      </section>
+
+      <section class="rsvp" aria-labelledby="rsvp-heading">
+        <div class="rsvp-heading"><p class="small-label">REÚNE A TU EQUIPO</p><h2 id="rsvp-heading">¿Aceptas la invitación?</h2><p>Mijail quiere celebrar contigo. Confírmanos si te unes a la aventura.</p></div>
+        <label class="name-label" for="guest-input">Nombre de superhéroe</label>
+        <input id="guest-input" class="name-input" type="text" name="name" maxlength="100" autocomplete="name" placeholder="Escribe tu nombre" required>
+        <div class="rsvp-buttons">
+          <button id="yes-button" class="rsvp-button yes-button" type="button"><span aria-hidden="true">✦</span> ¡Invitación aceptada!</button>
+          <button id="no-button" class="rsvp-button no-button" type="button"><span aria-hidden="true">↗</span> Esta vez no podré</button>
+        </div>
+        <p id="rsvp-message" class="rsvp-message" aria-live="polite"></p>
+      </section>
+
+      <footer class="invite-footer"><span>¡Te esperamos, héroe!</span><strong>Mijail</strong></footer>
+    </section>
+
+    <dialog class="response-dialog" id="decline-dialog" aria-labelledby="decline-title">
+      <div class="dialog-content">
+        <span class="dialog-flower" aria-hidden="true">✦</span>
+        <p class="small-label">MENSAJE RECIBIDO</p>
+        <h2 id="decline-title">¡Gracias por avisar, héroe!</h2>
+        <p>Esta vez no podremos contar contigo en la fiesta. Mijail te manda un abrazo y espera verte pronto.</p>
+        <button class="dialog-close" id="decline-close" type="button">Cerrar misión</button>
+      </div>
+    </dialog>
+    <p class="page-note">Una misión de cumpleaños para celebrar juntos <span aria-hidden="true">✦</span></p>
+  </main>
+</body>
+</html>

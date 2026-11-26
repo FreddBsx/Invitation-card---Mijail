@@ -1,0 +1,11 @@
+* { box-sizing:border-box; }
+body { margin:0; min-height:100vh; color:#092044; background:#cf1827 url('./assets/fondo-gracias.jpg') center/cover fixed; font-family:'DM Sans',system-ui,-apple-system,'Segoe UI',sans-serif; }
+.thank-page { display:grid; min-height:100vh; min-height:100svh; padding:18px; place-items:center; }
+.thank-card { position:relative; display:flex; width:min(100%,440px); flex-direction:column; align-items:center; padding:36px 28px 30px; border:3px solid #0b3472; border-radius:22px; background:rgba(255,255,255,.87); text-align:center; box-shadow:0 18px 55px rgba(3,20,49,.36); backdrop-filter:blur(2px); }
+.thank-burst { color:#e32636; font-size:34px; line-height:1; }
+.thank-eyebrow { margin:8px 0 4px; color:#0b3472; font-size:11px; font-weight:900; letter-spacing:.18em; }
+h1 { margin:0; color:#0b3472; font-family:Impact,'Arial Narrow',sans-serif; font-size:clamp(54px,14vw,78px); line-height:.88; text-transform:uppercase; text-shadow:2px 3px 0 #f7d436; }
+h1 span { color:#e32636; }
+.thank-copy { max-width:310px; margin:18px 0 22px; color:#314663; font-size:15px; line-height:1.55; }
+.back-button { display:inline-flex; min-height:46px; align-items:center; justify-content:center; padding:0 20px; border:2px solid #0b3472; border-radius:10px; background:#e32636; color:white; font-size:13px; font-weight:800; text-decoration:none; box-shadow:0 4px 0 #0b3472; }
+.back-button:focus-visible { outline:3px solid #f7d436; outline-offset:3px; }

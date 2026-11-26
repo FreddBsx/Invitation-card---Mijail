@@ -1,0 +1,11 @@
+.admin-shell { width:min(100% - 28px,760px); margin:0 auto; padding:30px 0; }
+.back-link { display:inline-block; margin:0 0 14px 3px; color:#776e77; font-size:12px; text-decoration:none; }
+.admin-card { padding:clamp(22px,5vw,40px); border:1px solid rgba(255,255,255,.8); border-radius:24px; background:rgba(255,250,243,.94); box-shadow:0 24px 70px rgba(100,36,52,.16); backdrop-filter:blur(4px); }
+.admin-card h1 { margin:7px 0 9px; font-size:42px; }
+.admin-intro { color:#78727c; font-size:13px; }
+.admin-form { max-width:480px; margin-top:24px; }.admin-form label { display:block; margin-bottom:6px; font-size:11px; font-weight:700; }
+.token-row { display:flex; gap:8px; }.token-row input { flex:1; min-width:0; height:42px; padding:0 11px; border:1px solid #e5c5c8; border-radius:10px; }.token-row button,.download-button { padding:0 15px; border:0; border-radius:10px; background:#a52d43; color:white; cursor:pointer; font-size:11px; font-weight:700; }
+.admin-message { min-height:18px; margin:10px 0 18px; color:#568066; font-size:12px; }.admin-message.error { color:#a24949; }
+.results-heading { display:flex; justify-content:space-between; align-items:end; gap:12px; margin:25px 0 12px; }.results-heading .small-label { margin-bottom:4px; font-size:9px; }.results-heading h2 { font-size:23px; }.download-button { min-height:38px; background:#7d293a; }
+.table-wrap { overflow-x:auto; border:1px solid #eee5db; border-radius:12px; }table { width:100%; border-collapse:collapse; text-align:left; }th,td { padding:11px 12px; border-bottom:1px solid #eee5db; font-size:12px; }th { background:#faf6f1; color:#716a73; font-size:10px; letter-spacing:.06em; text-transform:uppercase; }tbody tr:last-child td { border-bottom:0; }
+@media(max-width:520px) { .admin-shell { width:min(100% - 18px,760px); padding:12px 0; }.token-row { flex-direction:column; }.token-row button { min-height:40px; }.results-heading { align-items:start; flex-direction:column; }.download-button { min-height:38px; } }
